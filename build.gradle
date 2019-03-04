@@ -1,0 +1,13 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+	compile group: 'org.voltdb', name: 'voltdbclient', version: '8.4.1'
+}
+
+repositories {
+    jcenter()
+}
+
+mainClassName = 'Application'
