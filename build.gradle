@@ -2,6 +2,10 @@ plugins {
     id 'application'
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
+
 dependencies {
 	compile group: 'org.voltdb', name: 'voltdbclient', version: '8.4.1'
 }
