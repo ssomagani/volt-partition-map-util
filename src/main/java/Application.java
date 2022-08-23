@@ -50,16 +50,16 @@ public class Application {
         }
         System.out.println("----------------------------------------------");
         
-//		if(!client.isHashinatorInitialized())
-//			throw new Exception("Hashinator not initialized. Cannot Proceed.");
-//		
-//        String partColType = args[1];
-//        String partColVal = args[2];
-//
-//        long partId = client.getPartitionForParameter(VoltType.typeFromString(partColType).getValue(), partColVal);
-//        
-//		System.out.println("Partition column value " + partColVal + " --> PartitionId:SiteId@Hostname = " 
-//		+ partId + ":" + partSiteMap.get(partId));
+		if(!client.isHashinatorInitialized())
+			throw new Exception("Hashinator not initialized. Cannot Proceed.");
+		
+        String partColType = args[1];
+        String partColVal = args[2];
+
+        long partId = client.getPartitionForParameter(VoltType.typeFromString(partColType).getValue(), partColVal);
+        
+		System.out.println("Partition column value " + partColVal + " --> PartitionId:SiteId@Hostname = " 
+	+ partId + ":" + partSiteMap.get(partId));
 	}
 	
 	private static void connect(String servers) throws InterruptedException {
